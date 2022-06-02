@@ -147,7 +147,7 @@ select {
   font-size: 1.8rem;
 }
 @media(max-width:768px){
-  .opcion input{
+  .opcion input,select{
     width: 90%;
   }
 }
