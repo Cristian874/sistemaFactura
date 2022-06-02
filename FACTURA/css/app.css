@@ -146,6 +146,11 @@ img {
 select {
   font-size: 1.8rem;
 }
+@media(max-width:768px){
+  .opcion input{
+    width: 90%;
+  }
+}
 textarea {
   font-size: 1.5rem;
   margin-top: -1rem;
