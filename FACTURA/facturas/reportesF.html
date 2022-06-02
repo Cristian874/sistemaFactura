@@ -19,28 +19,37 @@
             <img src="../img/logo.png" alt="logotipo" />
           </div>
           <div class="header__title">
-            <h2>Actualizar Facturas</h2>
+            <h2>Reportes de Facturas</h2>
           </div>
           <div class="header__logo">
             <img class="logo__img" src="../img/logo.png" alt="logotipo" />
           </div>
         </div>
-      </div><!--Cerramos el div contenedor-->
-    </header><!--cerramos el header-->
+      </div>
+    </header><!--Cerramos el header-->
 
     <div class="buscador">
       <form class="proveedores contenedor">
         <div class=" buscador-boton">
           <div class="buscador-2 opcion">
             <label for="buscador">Ingrese el RFC a buscar</label>
+           
             <input type="text" id="buscador" />
+            <div class="opcion">
+              <label for="condicion">Condición Factura</label>
+              <select name="" id="condicion">
+                  <option selected="true" disabled="disabled">-- Selecciona --</option>
+                  <option value="1">Pendientes</option>
+                  <option value="2">Pagada</option>
+              </select>
+          </div>
           </div>
           <div class="boton-buscador">
             <input type="button" value="Buscar " class="boton pro-buscar" />
           </div>
         </div>
       </form>
-    </div><!--cerramos el buscador-->
+    </div><!--Cerramos el buscador-->
 
   
     <section class="proveedores contenedor">
@@ -120,11 +129,11 @@
 
 
       </form>
-    </section><!--cerramos la section de proveedores-->
+    </section><!--Cerramos la section de proveedores-->
 
     <section class="botones contenedor">
       <input type="button" value="Actualizar " class="boton" />
-    </section><!--cerramos la section de botones-->
+    </section><!--Cerramos la section de botones-->
 
     <footer class="footer " >
       <p>© Derechos Reservados Ferretería la Vencedora</p>

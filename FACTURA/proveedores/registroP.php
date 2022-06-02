@@ -14,7 +14,6 @@
   <body>
     <header class="header">
       <div class="contenedor">
-
         <div class="header__menu">
 
           <div class="header__logo">
@@ -22,44 +21,51 @@
           </div>
 
           <div class="header__title">
-            <h2>Actualizar Proveedores</h2>
+            <h2>Registro de Proveedores</h2>
           </div>
 
           <div class="header__logo">
             <img class="logo__img" src="../img/logo.png" alt="logotipo" />
           </div>
 
-        </div><!--Cerramos el header__menu-->
+        </div><!--cerramos el header__menu-->
+      </div><!--cerramos el contenedor-->
+    </header>
 
-      </div><!--Cerramos el contenedor-->
-    </header><!---Cerramos el header -->
-
-    <div class="buscador">
-      <form class="proveedores contenedor">
-        <div class="buscador-boton">
-          <div class="buscador-2 opcion">
-            <label for="buscador">Ingrese el RFC a buscar</label>
-            <input type="text" id="buscador" />
-          </div>
-          <div class="boton-buscador">
-            <input type="button" value="Buscar " class="boton pro-buscar" />
-          </div>
-        </div>
-      </form>
-    </div><!--Cerramos el Buscador-->
+    <div class="botones-crud contenedor">
+      <div class="boton2">
+        <input
+          type="button"
+          onclick="location.href='buscarP.html';"
+          value="Buscar Proveedores "
+          class="boton pro-buscar"
+        />
+      </div>
+      <div class="boton1">
+        <input
+          type="button"
+          onclick="location.href='actualizarP.html';"
+          value="Actualizar"
+          class="boton pro-buscar"
+        />
+      </div>
+      <div class="boton2">
+        <input type="button"  onclick="location.href='eliminarP.html';" value="Eliminar " class="boton pro-buscar" />
+      </div>
+    </div><!--Cerramos el div botones-crud -->
 
     <section class="proveedores contenedor">
       <form action="GET" class="formulario">
-
         <div class="opcion">
           <label for="rfc">RFC :</label>
           <input type="text" id="rfc" placeholder="Ingresa el RFC" />
-        </div><!--cerrramos el opcion-->
+        </div><!--ceramos en div de opcion-->
 
         <div class="opcion">
           <label for="nombre">Nombre: </label>
           <input type="text" id="nombre" placeholder="Ingresa el Nombre" />
-        </div><!--cerrramos el opcion-->
+        </div><!--ceramos en div de opcion-->
+
         <div class="opcion">
           <label for="banco">banco</label>
           <input
@@ -67,7 +73,8 @@
             id="banco"
             placeholder="Ingrese el nombre del banco"
           />
-        </div><!--cerrramos el opcion-->
+        </div><!--ceramos en div de opcion-->
+
         <div class="opcion">
           <label for="cuenta">Cuenta Clave</label>
           <input
@@ -75,7 +82,8 @@
             id="cuenta"
             placeholder="Ingrese la cuenta clave"
           />
-        </div><!--cerrramos el opcion-->
+        </div><!--ceramos en div de opcion-->
+
         <div class="opcion">
           <label for="tel">Télefono</label>
           <input
@@ -83,18 +91,19 @@
             id="tel"
             placeholder="Ingrese el número de Télefono"
           />
-        </div><!--cerrramos el opcion-->
+        </div><!--ceramos en div de opcion-->
+
         <div class="opcion">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Ingrese el Email" />
-        </div><!--cerrramos el opcion-->
-      </form><!--Cerramos el form-->
+        </div><!--ceramos en div de opcion-->
+
+      </form><!--Cerramos en form-->
+
     </section><!--Cerramos la section de proveedores-->
 
-
-    <!--Section de los botones-->
     <section class="botones contenedor">
-      <input type="button" value="Actualizar" class="boton" />
+      <input type="button" value="registrar" class="boton" />
     </section>
 
     <footer class="footer">
@@ -102,3 +111,8 @@
     </footer>
   </body>
 </html>
+
+
+<? php
+
+

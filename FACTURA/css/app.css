@@ -216,6 +216,11 @@ input::placeholder {
 .table {
   margin-top:6rem;
 }
+@media(max-width:768px){
+  .table{
+    display: block;
+  }
+}
 th{
   font-size: 1.8rem;
   text-align: center;
