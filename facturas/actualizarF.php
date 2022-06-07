@@ -51,7 +51,7 @@
       <form action="GET" class="formulario">
         <div class="opcion ">
           <label for="folio">Folio Factura :</label>
-          <input type="text" id="folio" placeholder="Folio Factura" />
+          <input type="text" id="folio" placeholder="Folio Factura" name="folio" />
         </div>
 
         <div class="opcion">

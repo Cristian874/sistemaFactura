@@ -1,4 +1,6 @@
 /** CUSTOM PROPERTIES **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
 :root {
   --fuenteprincipal: "Poppins", sans-serif;
   --separacion: 5rem;
@@ -47,6 +49,9 @@ img {
 .mt-5{
   margin: 3rem 0;
 }
+li{
+  list-style: none;
+}
 
 
 /*header */
@@ -56,6 +61,12 @@ img {
   background-position: top center;
   background-size: cover;
   height: 70vh;
+}
+.header__title h2{
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+
 }
 .header-blanco{
   background-color: var(--colorblanco);
@@ -94,6 +105,10 @@ img {
 }
 .header__barra li{
   list-style: none;
+
+}
+.header__barra li a{
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .header__barra li{
@@ -124,6 +139,8 @@ img {
 .texto ul li{
   font-size: 1.8rem;
   margin-bottom: .5rem;
+  list-style:symbols;
+  text-align: left;
 }
 .listado-h2{
   font-size: 2rem;
@@ -175,6 +192,23 @@ img {
   .formulario {
     display: block !important;
   }
+}
+.botonopcion{
+  background-color: var(--colorboton);
+  padding: .5rem;
+  color: var(--colorblanco);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 70%;
+  text-align: center;
+  border-radius: .5rem;
+}
+.botonopcion:hover{
+  color: var(--colorblanco);
+  text-decoration: none;
 }
 .opcion {
   display: grid;

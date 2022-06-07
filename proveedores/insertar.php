@@ -17,14 +17,7 @@
 
   $sentencia =$bd->prepare("INSERT INTO proveedores(rfc,nombre,banco,cuenta,telefono,email) VALUES(?,?,?,?,?,?);");
   $resultado = $sentencia->execute([$rfc,$nombre,$banco,$cuenta,$telefono,$email]);
-  if(resultado!=0; resultado++;){
 
-    location("registro.php")
-  }
-  else{
-    echo("error");
-    header_location('insertar.php')
-  }
 
 
 

@@ -41,23 +41,9 @@
             class="boton pro-buscar"
           />
         </div>
-        <div class="boton1">
-          <input
-            type="button"
-            onclick="location.href='actualizarF.php';"
-            value="Actualizar"
-            class="boton pro-buscar"
-          />
-        </div>
+  
       
-        <div class="boton1">
-          <input
-            type="button"
-            onclick="location.href='reportesF.php';"
-            value="Reporte"
-            class="boton pro-buscar"
-          />
-        </div>
+  
         <div class="boton2">
           <input
             type="button"
@@ -69,11 +55,12 @@
         <div class="boton1">
           <input
             type="button"
-            onclick="location.href='actualizarF.php';"
-            value="Limpiar"
+            onclick="location.href='actualizar.php';"
+            value="Actualizar"
             class="boton pro-buscar"
           />
         </div>
+      
         <div class="boton2">
           <input
             type="button"
@@ -83,10 +70,22 @@
           />
         </div>
       </div>
-      <form action="GET" class="formulario">
+      <form method="POST" action="insertar.php"  class="formulario">
         <div class="opcion">
           <label for="rfc">RFC :</label>
-          <input type="text" id="rfc" placeholder="Ingresa el RFC" required />
+          <input type="text" id="rfc" placeholder="Ingresa el RFC" required name="rfc"/>
+        </div>
+
+        <div class="opcion">
+          <label for="iva">Proveedor</label>
+          <select id="iva" name="proveedor">
+            <option selected="true" disabled="disabled"  >
+              -- Selecciona --
+            </option>
+            <option value="Juan">Juan 1</option>
+            <option value="Juan">Juan 2</option>
+            <option value="Otro">Otro</option>
+          </select>
         </div>
 
         <div class="opcion">
@@ -95,7 +94,7 @@
             type="text"
             id="factura"
             placeholder="Ingresa el folio de la factura"
-            required
+            required name="folio"
           />
         </div>
         <div class="opcion">
@@ -104,47 +103,52 @@
             type="date"
             id="fecha"
             placeholder="Ingrese la fecha de la factura"
-            required
+            required name="fecha"
           />
         </div>
         <div class="opcion">
-          <label for="plazo">Plazo / Pago</label>
+          <label for="plazo">Condición</label>
           <input
             type="text"
             id="plazo"
-            placeholder="Ingrese el plazo para pagar la factura"
-            required
+            placeholder="Ingrese la condición de la factura"
+            required name="condicion"
           />
         </div>
+      
         <div class="opcion">
           <label for="vencimiento">Fecha de vencimiento</label>
           <input
             type="date"
             id="vencimiento"
             placeholder="Ingrese la fecha de vencimiento"
-            required
+            required name="fechav"
           />
         </div>
 
         <div class="opcion">
-          <label for="subtotal">Subtotal</label>
-          <input type="email" id="subtotal" required />
+          <label for="subtotal">Importe tasa 16%</label>
+          <input type="text" id="subtotal" required name="importeuno" />
+        </div>
+        <div class="opcion">
+          <label for="subtotal">Importe tasa 0</label>
+          <input type="text" id="subtotal" required name="importedos"/>
         </div>
 
         <div class="opcion">
           <label for="iva">Porcentaje Iva</label>
-          <select id="iva">
+          <select id="iva" name="porcentajeiva">
             <option selected="true" disabled="disabled">
               -- Selecciona --
             </option>
-            <option value="1">16%</option>
-            <option value="2">0%</option>
+            <option value="16%">16%</option>
+            <option value="16%">0%</option>
           </select>
         </div>
 
         <div class="opcion">
-          <label for="importe">Importe</label>
-          <input type="text" id="importe" required />
+          <label for="importe">Importe Factura</label>
+          <input type="text" id="importe" required name="importef"/>
         </div>
         <div class="opcion">
           <label for="nota">Nota de Crédito</label>
@@ -152,23 +156,21 @@
             type="text"
             id="nota"
             placeholder="Escribe el tipo de nota de crédito"
-            required
+            required name="notac"
           />
         </div>
         <div class="opcion">
-          <label for="importe">Total</label>
-          <input type="text" id="importe" required />
+          <label for="importe">Importe</label>
+          <input type="text" id="importe" required name="importe" />
         </div>
-      </form>
 
-      <form action="" class="formulario">
         <div class="opcion">
           <label for="porcentaje" require>Descuento %</label>
           <input
             type="text"
             id="porcentaje"
             placeholder="Ingrese el porcentaje de descuento"
-            required
+            required name="descuentouno"
           />
         </div>
         <div class="opcion">
@@ -177,24 +179,27 @@
             type="text"
             id="descuento"
             placeholder="Ingrese el descuento por cantidad"
-            required
+            required name="descuentodos"
           />
         </div>
         <div class="opcion">
           <label for="iva">Iva del Total</label>
-          <input type="text" id="iva" required />
+          <input type="text" id="iva" required name="ivat"/>
         </div>
         <div class="opcion">
           <label for="subtotal">Importe a Pagar</label>
-          <input type="text" id="subtotal" required />
+          <input type="text" id="subtotal" required name="importep"/>
         </div>
+        <input type="hidden" name="oculto" value="1">
+      <section class="botones contenedor">
+      <input type="submit" value="registrar" class="boton" />
       </form>
+   
+    </section>
     </section><!--Cerrramos la section de proveedores-->
 
 
-    <section class="botones contenedor">
-      <input type="button" value="registrar" class="boton" />
-    </section>
+ 
   </body>
 </html>
 

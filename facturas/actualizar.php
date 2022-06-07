@@ -1,7 +1,7 @@
 <?php
 
 include '../model/conexion.php';
-$sentencia = $bd->query("SELECT * FROM proveedores");
+$sentencia = $bd->query("SELECT * FROM facturas");
 $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
 
 
@@ -31,7 +31,7 @@ $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
           </div>
 
           <div class="header__title">
-            <h2>Busqueda  de Proveedores</h2>
+            <h2>Actualizar Facturas</h2>
           </div>
 
           <div class="header__logo">
@@ -47,37 +47,21 @@ $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
     </header>
 
 
-    <!--- OURGE PROGRAMAR-->
+    <!--- OPCIÓN DEL BUSCADOR PROGRAMARLO LA PROXIMA SEMANADA
     <h2 class="text-center mt-5 listado-h2">Listado de todos los registros de proveedores</h2>
     <div class="buscador">
       <form class="proveedores contenedor">
         <div class=" buscador-boton">
           <div class="buscador-2 opcion">
             <label for="buscador">Ingrese el RFC a buscar</label>
-            <input type="text" name="Buscar" id="buscador" />
+            <input type="text" id="buscador" />
           </div>
           <div class="boton-buscador">
-            <input type="submit"  class="boton pro-buscar" />
+            <input type="button" value="Buscar " class="boton pro-buscar" />
           </div>
         </div>
       </form>
-
-      <?php
-      require 'conexion2.php';
-      $conexion=conexion();
-
-      if(!empty($_POST['Buscar'])){
-        $Buscar=$_POST('Buscar');
-
-        $sql= "SELECT * FROM proveedores WHERE rfc LIKE '%$Buscar%' OR LIKE  nombre '%$Buscar%'";
-      }else{
-        $sql= "SELECT * FROM proveedores";
-      }
-      
-
-
-      ?>
-    </div><!--cerramos el buscador-->
+    </div><!--cerramos el buscador-->-->
 
 <section class="tabla contenedor">
 
@@ -90,12 +74,13 @@ $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Rfc</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Banco</th>
-      <th scope="col">Cuenta</th>
-      <th scope="col">telefono</th>
-      <th scope="col">Email</th>
+      <th scope="col">Folio Factura</th>
+      <th scope="col">Fecha Factura</th>
+      <th scope="col">Estatus</th>
+      <th scope="col">Importe a pagar</th>
       <th scope="col">Opción</th>
+
+      
     </tr>
   </thead>
   <tbody>
@@ -105,12 +90,11 @@ $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
       <tr>
         <td><?php echo $dato->id;?></td>
         <td><?php echo $dato->rfc;?></td>
-        <td><?php echo $dato->nombre;?></td>
-        <td><?php echo $dato->banco;?></td>
-        <td><?php echo $dato->cuenta;?></td>
-        <td><?php echo $dato->telefono;?></td>
-        <td><?php echo $dato->email;?></td>
-        <td><a href="actualizar.php">actualizar</a></td>
+        <td><?php echo $dato->foliof;?></td>
+        <td><?php echo $dato->fechaf;?></td>
+        <td><?php echo $dato->condicion;?></td>
+        <td><?php echo $dato->importe;?></td>
+        <td><a href="actualizarF.php" class="botonopcion">Eliminar</a></td>
         
         
 

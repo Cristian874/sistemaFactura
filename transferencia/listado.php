@@ -45,17 +45,22 @@ $almacen = $sentencia->fetchALL(PDO::FETCH_OBJ);
       
     </header>
     <div class="buscador">
-      <form class="proveedores contenedor">
+      <form method="POST" class="proveedores contenedor">
         <div class=" buscador-boton">
           <div class="buscador-2 opcion">
             <label for="buscador">Ingrese el RFC a buscar</label>
-            <input type="text" id="buscador" />
+            <input type="text" name="Buscar" id="buscador" />
           </div>
           <div class="boton-buscador">
-            <input type="button" value="Buscar " class="boton pro-buscar" />
+            <input type="button"  value="Buscar " class="boton pro-buscar" />
           </div>
         </div>
       </form>
+      <?php
+
+      
+
+      ?>
     </div><!--cerramos el buscador-->
 
 <section class="tabla contenedor">
